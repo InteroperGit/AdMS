@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="javascripts/bundle.js"></script>
+    <link rel='stylesheet' href='stylesheets/style.css' />
+    <script src="/javascripts/client/bundle.js"></script>
   </head>
   <body>
     <div id="container">
