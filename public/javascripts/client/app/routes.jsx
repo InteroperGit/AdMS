@@ -2,7 +2,7 @@
  * Created by mmatveev on 25.07.15.
  */
 
-//todo Реализовать в обычном объекте. Собирать в jsx в App
+//todo Реализовать в обычном объекте. Собирать в jsx в AdminApp
 var React = require('react'),
     Router = require('react-router'),
     Route = Router.Route,

@@ -12,9 +12,9 @@ module.exports = [{
         path: path.join(__dirname, "public", "javascripts", "client"),
         filename: "bundle.js"
     },
-    plugins: [
+    /*plugins: [
         new webpack.optimize.UglifyJsPlugin()
-    ],
+    ],*/
     module: {
         loaders: [
             { test: /\.jsx$/, loader: "jsx-loader?harmony"}
@@ -24,6 +24,24 @@ module.exports = [{
         // You can now require('file') instead of require('file.coffee')
         extensions: ["", ".js", ".jsx"],
         root: [path.join(__dirname, "public", "javascripts", "client")],
+        modulesDirectories: ["node_modules"]
+    }
+}, {
+    context: path.join(__dirname, "public", "javascripts", "admin"),
+    entry: "app/app",
+    output: {
+        path: path.join(__dirname, "public", "javascripts", "admin"),
+        filename: "bundle.js"
+    },
+    module: {
+        loaders: [
+            { test: /\.jsx$/, loader: "jsx-loader?harmony"}
+        ]
+    },
+    resolve: {
+        // You can now require('file') instead of require('file.coffee')
+        extensions: ["", ".js", ".jsx"],
+        root: [path.join(__dirname, "public", "javascripts", "admin")],
         modulesDirectories: ["node_modules"]
     }
 }];

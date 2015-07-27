@@ -7,13 +7,14 @@ require("node-jsx").install({
 });
 
 var React = require("react");
-var AppRunner = require('../public/javascripts/client/app/view/app');
+var AppRunner = require('../public/javascripts/admin/app/view/app');
 
 /* GET home page. */
 router.get('/', function(req, res) {
   AppRunner.renderToString(function(markup) {
-    res.render('index', {
-      title: 'AdMs',
+    console.log(markup);
+    res.render('admin', {
+      title: 'AdMs Administration Panel',
       markup: markup
     });
   });
